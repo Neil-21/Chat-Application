@@ -14,7 +14,7 @@ dotenv.config();
 const PORT = process.env.PORT;
 
 //Middlwaare to parse JSON request body
-app.use(express.json());
+app.use(express.json({ limit: "5mb" })); // or "10mb"
 
 //Allow to parse cookie
 app.use(cookieParser());
